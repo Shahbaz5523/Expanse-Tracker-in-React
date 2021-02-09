@@ -1,14 +1,26 @@
 import React from 'react';
 import './TransactionHistory.css';
 import Transaction from './../Transaction/Transaction';
+import { useContext } from 'react';
+import transactionContex from './../transcationContex';
 
 function TransactionHistory() {
+
+    let list  = useContext(transactionContex);
+
+
     return (
         <div className="historyContainer">
             <h3>Transaction History</h3>
             <hr/>
             <div className="historyBox">
-                <Transaction/>
+                {
+                    list[0].map((value,index)=>{
+                        if(index!=0){
+                            return <Transaction des={value.description} amount={value.amount} key={index}/>
+                        }
+                    })
+                }
             </div>
         </div>
     );
