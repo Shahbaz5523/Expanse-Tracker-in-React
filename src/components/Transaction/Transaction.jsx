@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Transaction.css";
 
 function Transaction(props) {
@@ -7,13 +7,6 @@ function Transaction(props) {
       return <span>{"+$" + props.amount}</span>;
     } else {
       return <span>{"-$" + props.amount}</span>;
-    }
-  };
-  const setClass = () => {
-    if (props.amount > 0) {
-      return 'transactionBox sum';
-    } else {
-      return 'transactionBox mins';
     }
   };
 
