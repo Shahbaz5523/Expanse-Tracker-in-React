@@ -16,7 +16,7 @@ function TransactionHistory() {
             <div className="historyBox">
                 {
                     list[0].map((value,index)=>{
-                        if(index!=0){
+                        if(index!==0){
                             return <Transaction des={value.description} amount={value.amount} key={index}/>
                         }
                     })
