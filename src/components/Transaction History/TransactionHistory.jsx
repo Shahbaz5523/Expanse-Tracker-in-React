@@ -17,7 +17,7 @@ function TransactionHistory() {
                 {
                     list[0].map((value,index)=>{
                         if(index!==0){
-                            return <Transaction des={value.description} amount={value.amount} key={index}/>
+                            return <Transaction des={value.description} index={index} amount={value.amount} key={index}/>
                         }
                         return null;
                     })
