@@ -8,7 +8,7 @@ import NewTransaction from "./components/newTransaction/newTransaction";
 import transactionContex from "./components/transcationContex";
 
 function App() {
-  let list = useState([{}]);
+  let list = useState([]);
 
   return (
     <transactionContex.Provider value={list}>

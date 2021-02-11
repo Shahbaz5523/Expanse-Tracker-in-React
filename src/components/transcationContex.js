@@ -1,5 +1,5 @@
 import { createContext } from "react";
 
-let transactionContex = createContext('Some data');
+let transactionContex = createContext();
 
 export default transactionContex;

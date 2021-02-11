@@ -7,11 +7,9 @@ function BalanceDetail() {
 
   const calIncome = () => {
     let sum = 0;
-    list[0].forEach((value , index) => {
-      if(index !== 0){
-        if(value.amount[0] !== '-'){
-          sum = sum + Number(value.amount);
-        }
+    list[0].forEach((value, index) => {
+      if (value.amount[0] !== "-") {
+        sum = sum + Number(value.amount);
       }
     });
     return <span>${sum}.00</span>;
@@ -19,11 +17,9 @@ function BalanceDetail() {
 
   const calExpense = () => {
     let mins = 0;
-    list[0].forEach((value , index) => {
-      if(index !== 0){
-        if(value.amount[0] === '-'){
-          mins = mins + Number(value.amount);
-        }
+    list[0].forEach((value, index) => {
+      if (value.amount[0] === "-") {
+        mins = mins + Number(value.amount);
       }
     });
     return <span>${mins}.00</span>;

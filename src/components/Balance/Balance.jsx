@@ -1,16 +1,14 @@
-import React , {useContext} from "react";
+import React, { useContext } from "react";
 import "./Balance.css";
-import transactionContex from './../transcationContex';
+import transactionContex from "./../transcationContex";
 
 function Balance() {
   let list = useContext(transactionContex);
 
   const calBalance = () => {
     let total = 0;
-    list[0].forEach((value, index) => {
-      if (index !== 0) {
-          total = total + Number(value.amount);
-      }
+    list[0].forEach((value) => {
+      total = total + Number(value.amount);
     });
     return <span>${total}.00</span>;
   };

@@ -4,6 +4,7 @@ import transactionContex from "./../transcationContex";
 
 function NewTransaction() {
   let list = useContext(transactionContex);
+
   let [des, setdes] = useState();
   let [amn, setamn] = useState();
 
